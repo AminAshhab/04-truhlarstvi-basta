@@ -312,11 +312,16 @@ p { color: var(--text); }
   display: grid; grid-template-columns: 24px 1fr; gap: 1.5rem;
   margin-bottom: 3rem; align-items: start;
 }
+.timeline-item .timeline-dot { grid-column: 1; grid-row: 1; }
+.timeline-item .timeline-content { grid-column: 2; grid-row: 1; }
+.timeline-item .timeline-spacer { display: none; }
 @media (min-width: 900px) {
   .timeline-item { grid-template-columns: 1fr 24px 1fr; gap: 2.5rem; }
-  .timeline-item:nth-child(even) { direction: rtl; }
-  .timeline-item:nth-child(even) > * { direction: ltr; }
-  .timeline-item:nth-child(even) .timeline-content { text-align: right; }
+  .timeline-item .timeline-content { grid-column: 1; grid-row: 1; }
+  .timeline-item .timeline-dot { grid-column: 2; grid-row: 1; }
+  .timeline-item .timeline-spacer { display: block; grid-column: 3; grid-row: 1; }
+  .timeline-item:nth-child(even) .timeline-content { grid-column: 3; text-align: right; }
+  .timeline-item:nth-child(even) .timeline-spacer { grid-column: 1; }
 }
 .timeline-dot {
   width: 24px; height: 24px; border-radius: 50%; background: var(--bg);

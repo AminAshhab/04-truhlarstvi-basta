@@ -43,13 +43,14 @@ function Timeline() {
 
         <div className="timeline">
           {milestones.map((m) => (
-            <article key={m.year} className="timeline-item">
-              <div className="timeline-dot"></div>
+            <article key={m.year} className="timeline-item reveal">
               <div className="timeline-content">
                 <div className="timeline-year">{m.year}</div>
                 <h3 className="timeline-title">{m.title}</h3>
                 <p className="timeline-desc">{m.desc}</p>
               </div>
+              <div className="timeline-dot"></div>
+              <div className="timeline-spacer"></div>
             </article>
           ))}
         </div>
