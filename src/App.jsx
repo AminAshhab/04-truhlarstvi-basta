@@ -14,7 +14,6 @@ import Process from './components/Process.jsx'
 import References from './components/References.jsx'
 import Certifikaty from './components/Certifikaty.jsx'
 import Contact from './components/Contact.jsx'
-import Footer from './components/Footer.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -116,7 +115,6 @@ function App() {
       <References />
       <Certifikaty />
       <Contact />
-      <Footer />
     </div>
   )
 }
