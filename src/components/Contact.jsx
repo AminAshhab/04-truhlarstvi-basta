@@ -51,9 +51,10 @@ function Contact() {
 
             <div className="map-embed">
               <iframe
-                src="https://frame.mapy.cz/s/cazenavefe"
+                src="https://www.google.com/maps?q=%C3%9Ast%C3%AD+105%2C+588+42+V%C4%9Btrn%C3%BD+Jen%C3%ADkov&output=embed"
                 title="Mapa — Ústí 105, Větrný Jeníkov"
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </div>

@@ -511,7 +511,9 @@ p { color: var(--text); }
   transition: opacity 0.3s, transform 0.3s var(--ease-out-quart);
 }
 .gallery-item:hover .gallery-zoom,
-.gallery-item:focus-visible .gallery-zoom { opacity: 1; transform: scale(1); }
+.gallery-item:focus-visible .gallery-zoom,
+.cert-item:hover .gallery-zoom,
+.cert-item:focus-visible .gallery-zoom { opacity: 1; transform: scale(1); }
 @media (max-width: 699px) {
   .gallery-item { aspect-ratio: 4 / 3; }
   .gallery-zoom { opacity: 1; transform: scale(1); width: 30px; height: 30px; font-size: 1.1rem; }
@@ -680,19 +682,20 @@ p { color: var(--text); }
 /* =========================================================
    Contact band
    ========================================================= */
-.contact-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; }
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: start; }
 @media (min-width: 900px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 5rem; } }
 
 .contact-channels { display: flex; flex-direction: column; gap: 1px;
   background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  align-self: start;
 }
 .channel {
-  background: var(--bg); padding: 1.4rem 0;
+  background: var(--bg); padding: 1.4rem 1.25rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   transition: padding 0.3s var(--ease-out-quart), background 0.3s;
   position: relative;
 }
-.channel:hover { padding-left: 1.25rem; background: var(--bg-card); }
+.channel:hover { padding-left: 1.75rem; background: var(--bg-card); }
 .channel-label { display: flex; flex-direction: column; gap: 0.25rem; }
 .channel-label .name {
   font-family: var(--font-sans); font-size: 0.72rem; font-weight: 500;
